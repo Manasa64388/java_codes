@@ -1,0 +1,29 @@
+package week2;
+class Hospital{
+	//instance variable
+	String patientName;
+	int patientid;
+	//static variable
+	static String DocName="Dr.Murthy";
+	
+	void sethospital(String pN, int pId) {
+		patientName=pN;
+		patientid=pId;
+	}
+	String getpatientName() {
+		return patientName;
+	}
+	int getpatientid() {
+		return patientid;
+	}
+}
+public class demo_scope_of_variables {
+	public static void main(String[] args) {
+		//local variable
+		String hospitalName="Apollo Hospital";
+		Hospital patient1 = new Hospital();
+		patient1.sethospital("Anita Joseph",101);
+		System.out.println("The patient\t"+patient1.getpatientName()+"\twith the id\t"+patient1.getpatientid()+"\tis treated by\t"+patient1.DocName+"\tat\t"+hospitalName);
+	}
+
+}
