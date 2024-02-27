@@ -1,0 +1,33 @@
+package week4;
+import java.util.Scanner;
+public class demoFinalize_method {
+	public static void main(String[] args) {
+		students harsha = new students();
+		harsha.display();
+		System.out.println("Object reference is... + harsha");
+		harsha.finalize();
+		System.out.println("Object garbage collected");
+	}
+}
+class students{
+	String name;
+	int rno;
+	float res;
+	Scanner sc=new Scanner(System.in);
+	students(){
+		System.out.println("Enter roll no of student: ");
+		rno=Integer.parseInt(sc.next());
+		System.out.println("Enter name of student: ");
+		name=sc.next();
+		System.out.println("Enter result of student: ");
+		res=Float.parseFloat(sc.next());
+	}
+	void display() {
+		System.out.println(rno+"\t\t"+name+"\t\t"+res);
+	}
+	@Override
+	protected void finalize() {
+		sc.close();
+		System.out.println("Object cleaned up by Finalize method.");
+	}
+}
