@@ -1,0 +1,47 @@
+package week2;
+class Student3
+{
+    /* Instance Variables*/
+    String name, RegNo;
+    int ia1,ia2,ia3,act,cie_avg,st_ia1,st_ia2;
+    int wt_avg,st_avg;
+   
+    /* Class Variable or Static variable*/
+    static String institute_name = "Govt Polytechnic for Women, Bengaluru";
+    static String course = "Computer Science and Engineering";
+    static byte semester = 4;
+       
+    void setStudent(String n, String rno, int i1,int i2,int i3, int act, int st_i1,int st_i2)
+    {
+        /* Local Variables*/
+        int st_a,wt_a;
+       
+        name = n; RegNo = rno ; this.act = act;
+        ia1 = i1; ia2 = i2; ia3 = i3;
+        st_ia1 = st_i1; st_ia2 = st_i2;
+        wt_a = (ia1+ia2+ia3)/3;
+        st_a = (st_ia1 + st_ia2)/2;
+        wt_avg = wt_a; st_avg = st_a;
+        cie_avg = wt_avg + st_avg + this.act ;
+    }
+    void getStudent()
+    {
+        System.out.println(RegNo+"\t"+name+"\t\t"+ia1+"\t"+ia2+"\t"+ia3+"\t\t"+wt_avg+"\t\t"+st_ia1+"\t"+st_ia2+"\t\t"+st_avg+"\t"+this.act+"\t"+cie_avg);
+    }
+}
+public class Types_of_scope_of_variables{
+	public static void main(String a[])
+    {
+        Student3 ayesha = new Student3();
+        Student3 sufiya = new Student3();
+        Student3 alisha = new Student3();
+        ayesha.setStudent("Noorie Ayesha M", "119CS22039",29,12,8,9,12,18);
+        sufiya.setStudent("Sufiya Khannum", "119CS22054",9,15,16,9,16,11);
+        alisha.setStudent("Alisha Gates", "111AI80001",10,20,15,10,20,20);
+        System.out.println("The Marks Details of Students studying in "+Student3.institute_name+" of "+Student3.semester+" from "+Student3.course);
+        System.out.println("Reg No\t\tName\t\t\tCIE-I\tCIE-II\tCIE-III\t\tCIE-AVG\t\tST-1\tST-2\t\tST-AVG\tACT\tTOTAL");
+        ayesha.getStudent();
+        sufiya.getStudent();
+        alisha.getStudent();
+    }
+}
