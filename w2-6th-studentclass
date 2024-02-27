@@ -1,0 +1,29 @@
+package week2;
+class Student1{
+	String studName, dept;
+	int Rollno;
+	static String clg="GPT";
+	int percentage;
+	
+	void setStudent1(String Name, int rollno, String cdept, int per) {
+		studName=Name;
+		Rollno=rollno;
+		dept=cdept;
+		percentage=per;
+	}
+	void getStudent1() {
+		System.out.println(studName+"\t\t"+Rollno+"\t\t"+clg+"\t\t"+dept+"\t\t"+percentage);
+	}
+}
+public class Student_class {
+	public static void main(String[] args) {
+		System.out.println("Name\t\t Rollno\t\tCollege\t\tDepartment\tPercentage");
+		Student1 stud1=new Student1();
+		Student1 stud2=new Student1();
+		stud1.setStudent1("Sindhu", 155, "CS", 88);
+		stud2.setStudent1("Madhu", 100, "EC", 90);
+		stud1.getStudent1();
+		stud2.getStudent1();
+				
+	}
+}
