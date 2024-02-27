@@ -1,0 +1,39 @@
+package week2;
+class Student2
+{
+    String name;
+    String RegNo;
+    float result;
+    int ia1,ia2,ia3,avg;
+   
+    void setStudent2(String n, String rno, float res,int i1,int i2,int i3)
+    {
+        name = n; RegNo = rno ; result = res; ia1 = i1; ia2 = i2; ia3 = i3;
+        avg = (ia1+ia2+ia3)/3;
+    }
+    void getStudent2()
+    {
+        System.out.println("The Name of the student is ..."+name);
+        System.out.println("The Reg No of the student is ..."+RegNo);
+        //System.out.println("The Result of the student is ..."+result);    
+        System.out.println("The CIE-I of the student is ..."+ia1);    
+        System.out.println("The CIE-II of the student is ..."+ia2);    
+        System.out.println("The CIE-III of the student is ..."+ia3);    
+        System.out.println("The Average of the student is ..."+avg);            
+    }
+}
+class accessing_data_members{
+public static void main(String a[])
+    {
+        Student2 ayesha = new Student2();
+        Student2 sufiya = new Student2();
+        ayesha.setStudent2("Ayesha", "119CS22039", 80, 29,12,8);
+        System.out.println("Object Ayesha Ref"+ayesha);
+        ayesha.getStudent2();
+        /*sufiya.name = "Sufiya Khannum";
+        sufiya.RegNo = "119CS22054";
+        sufiya.result = 99.9f;    
+        System.out.println("Object Sufiya Ref"+sufiya);
+        sufiya.getStudent();*/
+    }
+}
