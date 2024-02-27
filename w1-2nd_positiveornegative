@@ -1,0 +1,16 @@
+package week1;
+public class positiveornegative{
+	public static void main(String[] args) {
+		int num=109;
+		if (num>0){
+			System.out.println(num+"Is positive number");
+		}
+		else if (num<0){
+			System.out.println(num+"Is negative number");
+		}
+		else {
+			System.out.println(num+"Is either positive nor negative");
+		}
+	}
+}
+
