@@ -1,0 +1,33 @@
+package week2;
+class values{
+	byte Byte;
+	int integer;
+	long Long;
+	short Short;
+	boolean Boolean;
+	String string;
+	float Float;
+	char Ch;
+	double Double;
+	
+	void getvalues()
+	{
+		System.out.println("The default value of primitive Byte: "+Byte);
+		System.out.println("The default value of primitive Integer: "+integer);
+		System.out.println("The default value of primitive Long: "+Long);
+		System.out.println("The default value of primitive Short: "+Short);
+		System.out.println("The default value of primitive Boolean: "+Boolean);
+		System.out.println("The default value of primitive Float: "+Float);
+		System.out.println("The default value of primitive string: "+string);
+		System.out.println("The default value of primitive character: "+Ch);
+		System.out.println("The default value of primitive Double: "+Double);
+		
+	}
+}
+public class default_variables_of_instance {
+	public static void main(String[] args) {
+		values var=new values();
+		var.getvalues(); 
+	}
+
+}
