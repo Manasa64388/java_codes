@@ -1,0 +1,24 @@
+package week3;
+//code-1;
+import java.util.Scanner;
+public class calculateAverage {
+	public static void main(String[] args) {
+		float average = 0.0f;
+		Scanner sc = new Scanner(System.in);
+		//This line declares array Integer wrapper object
+		Integer cie1,cie2,cie3;
+		//Autobox
+		//The parsed value of integer constant is converted wrapper object
+		System.out.println("Enter the score of first Internal: ");
+		cie1=Integer.parseInt(sc.next());
+		System.out.println("Enter the score of Second Internal: ");
+		cie2=Integer.parseInt(sc.next());
+		System.out.println("Enter the score of Third Internal: ");
+		cie3=Integer.parseInt(sc.next());
+		//Unbox
+		//The wrapper object value is converted into Primitive Data Type
+		average=(float)(cie1+cie2+cie3)/3;
+		System.out.println("The average Internal Score is: "+average);
+		sc.close();
+	}
+}
