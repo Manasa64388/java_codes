@@ -9,7 +9,7 @@ public class bubble_sortString {
 			list[i]=inScanner.next();
 		for (int i=0; i<10; i++) {
 			for (int j=1; j<10-i; j++) {
-				if (list[j-1].compareTo(list[j]>0)){
+				if (list[j-1].compareTo(list[j])>0){
 					String str=list[j];
 					list[j]=list[j-1];
 					list[j-1]=str;
