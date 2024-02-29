@@ -26,11 +26,11 @@ public class additionofmatrix_2D {
 			}
 		}
 		System.out.println("Result matrix: ");
-		for (int i=0; i<size; i++) {
+		or (int i=0; i<size; i++) {
 			for (int j=0; j<size; j++){
-				System.out.println(result[i][j] + "\t");			
+				System.out.print(result[i][j] + "    ");
 			}
-		System.out.println(" ");
+			System.out.println("    ");	
 		}	
 	}
 }
