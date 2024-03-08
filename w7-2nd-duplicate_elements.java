@@ -11,11 +11,11 @@ public class duplicate_elements{
 		for (int i=0; i<size; i++)
 			array[i]=inScanner.nextInt();
 		int i,j=0;
-		Outer: for (i=0; i<size-1; i++) {
+		outer: for (i=0; i<size-1; i++) {
 			for (j=i+1; j<size; j++) {
-				if (array[i]==array[i]) {
+				if (array[j]==array[i]) {
 					isDuplicate = true;
-					break Outer;
+					break outer;
 				}
 			}
 		}
